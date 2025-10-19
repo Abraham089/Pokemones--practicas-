@@ -1,0 +1,53 @@
+name: Build and Analyze C# with SonarCloud
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    types: [opened, synchronize, reopened]
+    branches:
+      - main
+
+jobs:
+  build:
+    name: Build and analyze
+    runs-on: windows-latest
+
+    steps:
+      # PASO 1: Configurar .NET
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v4
+        with:
+          # AVISO: Ajusta esta versión de .NET si tu proyecto usa otra
+          dotnet-version: "8.0.x"
+
+      # PASO 2: Descargar el código
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0 # Esencial para un análisis completo de SonarCloud
+
+      # PASO 3: Instalar el escáner de SonarCloud
+      # Simplificamos este paso usando la instalación global (como te mostré antes)
+      # en lugar de manejar manualmente la caché y el path temporal.
+      - name: Install SonarCloud Scanner
+        shell: powershell
+        run: dotnet tool install --global dotnet-sonarscanner
+
+      # PASO 4: Construir y analizar
+      - name: Build and analyze
+        env:
+          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+        shell: powershell
+        run: |
+          # 1. Iniciar el análisis (Usamos 'dotnet-sonarscanner' directamente porque es global)
+          dotnet sonarscanner begin `
+            /k:"Abraham089_Pokemones--practicas-" `
+            /o:"abraham089" `
+            /d:sonar.token="${{ secrets.SONAR_TOKEN }}"
+            
+          # 2. Compilar el proyecto
+          dotnet build
+
+          # 3. Finalizar el análisis y enviar a SonarCloud
+          dotnet sonarscanner end /d:sonar.token="${{ secrets.SONAR_TOKEN }}"
