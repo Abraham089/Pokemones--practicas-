@@ -1,6 +1,5 @@
 public class Pokeball
 {
-  int eat = "3";
   private int _captureMultiplier;
   public int CaptureMultiplier
   {
@@ -28,10 +27,28 @@ public class Pokeball
 
   public virtual bool CapturablePokemon(Pokemon pokemon)
   {
-    if (pokemon is not CapturablePokemon)
+    if (pokemon is not CapturablePokemon capturablePokemon)
     {
-      Console.WriteLine("El pokemon no puede ser capturado");
-      
+      Console.WriteLine($"El Pokémon {pokemon.Name} no puede ser capturado (No es de tipo CapturablePokemon).");
+      return false;
+    }
+
+    Random random = new Random();
+    int valorDeCaptura = random.Next(1, 256);
+    int probabilidadDeCaptura = CaptureCalculator.CalculateCaptureProbability(capturablePokemon, this);
+
+    Console.WriteLine($"Probabilidad de Captura: {probabilidadDeCaptura}");
+    Console.WriteLine($"Valor Aleatorio Generado: {valorDeCaptura}");
+
+    if (valorDeCaptura <= probabilidadDeCaptura)
+    {
+      Console.WriteLine($"¡Felicidades! ¡El Pokémon {capturablePokemon.Name} ha sido capturado!");
+      return true;
+    }
+    else
+    {
+      Console.WriteLine($"¡Oh no! El Pokémon {capturablePokemon.Name} ha escapado.");
+      return false;
     }
   }
 }
