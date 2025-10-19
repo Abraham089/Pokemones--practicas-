@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "KpkEyszE/tM=",
+  "dgSpecHash": "0CC9bqFGc/0=",
   "success": true,
-  "projectFilePath": "C:\\Users\\abrah\\OneDrive\\Desktop\\Temporal\\Polimorfismo\\Pokemones (practicas)\\Practica_pokemones\\Practica_pokemones.csproj",
+  "projectFilePath": "C:\\Users\\abrah\\OneDrive\\Desktop\\Temporal\\POO\\Polimorfismo\\Pokemones--practicas-\\Practica_pokemones\\Practica_pokemones.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\abrah\\.nuget\\packages\\microsoft.dotnet.ilcompiler\\9.0.9\\microsoft.dotnet.ilcompiler.9.0.9.nupkg.sha512",
     "C:\\Users\\abrah\\.nuget\\packages\\microsoft.net.illink.tasks\\9.0.9\\microsoft.net.illink.tasks.9.0.9.nupkg.sha512",

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\abrah\\OneDrive\\Desktop\\Temporal\\Polimorfismo\\Pokemones (practicas)\\Practica_pokemones\\Practica_pokemones.csproj": {}
+    "C:\\Users\\abrah\\OneDrive\\Desktop\\Temporal\\POO\\Polimorfismo\\Pokemones--practicas-\\Practica_pokemones\\Practica_pokemones.csproj": {}
   },
   "projects": {
-    "C:\\Users\\abrah\\OneDrive\\Desktop\\Temporal\\Polimorfismo\\Pokemones (practicas)\\Practica_pokemones\\Practica_pokemones.csproj": {
+    "C:\\Users\\abrah\\OneDrive\\Desktop\\Temporal\\POO\\Polimorfismo\\Pokemones--practicas-\\Practica_pokemones\\Practica_pokemones.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\abrah\\OneDrive\\Desktop\\Temporal\\Polimorfismo\\Pokemones (practicas)\\Practica_pokemones\\Practica_pokemones.csproj",
+        "projectUniqueName": "C:\\Users\\abrah\\OneDrive\\Desktop\\Temporal\\POO\\Polimorfismo\\Pokemones--practicas-\\Practica_pokemones\\Practica_pokemones.csproj",
         "projectName": "Practica_pokemones",
-        "projectPath": "C:\\Users\\abrah\\OneDrive\\Desktop\\Temporal\\Polimorfismo\\Pokemones (practicas)\\Practica_pokemones\\Practica_pokemones.csproj",
+        "projectPath": "C:\\Users\\abrah\\OneDrive\\Desktop\\Temporal\\POO\\Polimorfismo\\Pokemones--practicas-\\Practica_pokemones\\Practica_pokemones.csproj",
         "packagesPath": "C:\\Users\\abrah\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\abrah\\OneDrive\\Desktop\\Temporal\\Polimorfismo\\Pokemones (practicas)\\Practica_pokemones\\obj\\",
+        "outputPath": "C:\\Users\\abrah\\OneDrive\\Desktop\\Temporal\\POO\\Polimorfismo\\Pokemones--practicas-\\Practica_pokemones\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

@@ -1,5 +1,6 @@
 public class Pokeball
 {
+  int eat = "3";
   private int _captureMultiplier;
   public int CaptureMultiplier
   {
